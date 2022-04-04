@@ -1,0 +1,22 @@
+ID,SYSTEM_NAME,DISPLAY_TXT,STATUS_IND,FILTER_TXT,SEQNBR_PREFIX,CLASS_CD,DEFAULT_IND,DISPLAY_ORDER_NUM,PROJECT_ID,PROJECT_SYSTEM_ROLE_SUFFIX
+d555528c-bb1d-2723-e053-0100007f945f,T700,T700 Engine,A,,70--,T700,N,1,1,T700
+d555528c-bb1e-2723-e053-0100007f945f,T55,T55 Engine,A,,55--,T55,N,1,1,T55
+d555528c-bb1f-2723-e053-0100007f945f,Apache Nose Gearbox,Apache Engine Nose Gearbox,A,,AE--,Apache Nose Gearbox,N,1,1,APACHENOSEGBOX
+d555528c-bb20-2723-e053-0100007f945f,Apache Intermediate Gearbox,Apache Intermediate Gearbox,A,,AM--,Apache Intermediate Gearbox,N,1,1,APACHEINTERGBOX
+d555528c-bb21-2723-e053-0100007f945f,Apache Tail Rotor Gearbox,Apache Tail Rotor Gearbox,A,,AR--,Apache Tail Rotor Gearbox,N,1,1,APACHETAILRTRGBOX
+d555528c-bb22-2723-e053-0100007f945f,Apache Main Transmission,Apache Main Transmission,A,,AT--,Apache Main Transmission,N,1,1,APACHEMAINTRANS
+d555528c-bb23-2723-e053-0100007f945f,Apache Hydraulics Pneumatics,Apache Hydraulics Pneumatics,A,,AH--,Apache Hydraulics,N,1,1,APACHEHYDRAULICS
+d555528c-bb24-2723-e053-0100007f945f,Apache Rotor,Apache Rotor,A,,AO--,Apache Rotor,N,1,1,APACHEROTOR
+d555528c-bb25-2723-e053-0100007f945f,Chinook Rotor,Chinook Rotor,A,,CO--,Chinook Rotor,N,1,1,CHINOOKROTOR
+d555528c-bb26-2723-e053-0100007f945f,Chinook Drive Train,Chinook Drive Train,A,,C9--,Chinook Drive Train,N,1,1,CHINOOKDRVTRAIN
+d555528c-bb27-2723-e053-0100007f945f,Blackhawk Rotor,Blackhawk Rotor,A,,UO--,Blackhawk Rotor,N,1,1,BLACKHAWKROTOR
+d555528c-bb28-2723-e053-0100007f945f,Blackhawk Drive Train,Blackhawk Drive Train,A,,UZ--,Blackhawk Drive Train,N,1,1,BLACKHAWKDRVTRAIN
+d555528c-bb29-2723-e053-0100007f945f,Blackhawk Electrical,Blackhawk Electrical,A,,UH03,Blackhawk Electrical,N,1,1,BLACKHAWKELECTRIC
+d555528c-bb2a-2723-e053-0100007f945f,Apache Auxiliary Power Plant,Apache Auxiliary Power Plant,A,,AH02,Apache Auxiliary Power Plant,N,1,1,APACHEAUXPWRPLANT
+d555528c-bb2b-2723-e053-0100007f945f,Blackhawk Hydraulics Pneumatics,Blackhawk Hydraulics Pneumatics,A,,UH09,Blackhawk Hydraulics Pneumatics,N,1,1,BLACKHAWKHYDPNEUMATICS
+d555528c-bb2c-2723-e053-0100007f945f,Chinook Hydraulics Pneumatics,Chinook Hydraulics Pneumatics,A,,CH09,Chinook Hydraulics Pneumatics,N,1,1,CHINOOKHYDPNEUMATICS
+d555528c-bb2d-2723-e053-0100007f945f,Apache Flight Controls,Apache Flight Controls,A,,AF--,Apache Flight Controls,N,1,1,APACHEFLTCNTRL
+d555528c-bb2e-2723-e053-0100007f945f,Apache Shafts and Couplings,Apache Shafts and Couplings,D,,AH01,Apache Shafts and Couplings,N,1,1,APACHESHAFTSCOUPLINGS
+d555528c-bb2f-2723-e053-0100007f945f,Kiowa Drive Train,Kiowa Drive Train,A,,OH01,Kiowa Drive Train,N,1,1,KIOWADRVTRAIN
+d555528c-bb30-2723-e053-0100007f945f,IBAS-TYAD,IBAS-TYAD,D,,,IBAS-TYAD,N,1,2,IBAS-TYAD
+d555528c-bb31-2723-e053-0100007f945f,IBAS-LEAD,IBAS-LEAD,D,,,IBAS-LEAD,N,1,2,IBAS-LEAD
