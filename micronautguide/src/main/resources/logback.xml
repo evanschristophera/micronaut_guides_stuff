@@ -9,6 +9,7 @@
         </encoder>
     </appender>
     <logger name="org.testcontainers.DockerClientFactory" level="trace" />
+    <logger name="io.micronaut.publisher" level="trace" />
     <root level="info">
         <appender-ref ref="STDOUT" />
     </root>

@@ -1,7 +1,7 @@
 
 create
-or replace view rimfirede_metadata.v_data_labels_by_system
-            (sys_data_label_id, system_id, system_name, data_label_type_id, data_label_type_name, data_label_id, data_label_txt,
+or replace view rimfirede_metadata.system_data_labels
+            (system_data_labels_id, system_id, system_name, data_label_type_id, data_label_type_name, data_label_id, data_label_txt,
              display_order_num) as
 WITH query AS (
     SELECT xstdl.sys_data_label_id,
@@ -17,7 +17,7 @@ WITH query AS (
              JOIN rimfirede_metadata.vt_data_labels dl ON xstdl.data_label_id = dl.data_label_id
              JOIN rimfirede_metadata.vt_data_label_types dlt ON dl.data_label_type_id = dlt.data_label_type_id
 )
-SELECT query.sys_data_label_id,
+SELECT query.sys_data_label_id system_data_labels_id,
        query.system_id,
        query.system_name,
        query.data_label_type_id,
