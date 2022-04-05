@@ -2,12 +2,17 @@ micronaut:
   application:
     name: micronautguide
 datasources:
-  default:
+  mn-datasource:
     url: ${JDBC_URL:`jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE`}
     username: ${JDBC_USER:sa}
     password: ${JDBC_PASSWORD:""}
     driverClassName: ${JDBC_DRIVER:org.h2.Driver}
+  de-datasource:
+    url: ${JDBC_URL_DE:`jdbc:h2:mem:default;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE`}
+    username: ${JDBC_USER_DE:sa}
+    password: ${JDBC_PASSWORD_DE:""}
+    driverClassName: ${JDBC_DRIVER_DE:org.h2.Driver}
 flyway:
   datasources:
-    default:
+    mn-datasource:
       enabled: true

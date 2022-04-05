@@ -1,8 +1,7 @@
 package example.micronaut;
 
-import example.micronaut.domain.Genre;
+import example.micronaut.domain.SystemDataLabels;
 import io.micronaut.core.annotation.NonNull;
-import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.exceptions.DataAccessException;
 import io.micronaut.data.jdbc.annotation.JdbcRepository;
@@ -13,27 +12,29 @@ import io.micronaut.transaction.annotation.TransactionalAdvice;
 import javax.transaction.Transactional;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.UUID;
 
-@Repository( "mn-datasource")
-@JdbcRepository(dialect = Dialect.POSTGRES)
-@TransactionalAdvice("mn-datasource")
+
 /**
- Genre, the entity to treat as the root entity for the purposes of querying,
+ The entity to treat as the root entity for the purposes of querying,
  is established either from the method signature or from the generic
  type parameter specified to the GenericRepository interface.
 
- The micronaut framework implements this at compile time.
+ The micronaut framework implements this interface at compile time.
  */
-public interface GenreRepository extends PageableRepository<Genre, Long>  {
+@Repository( "de-datasource")
+@JdbcRepository(dialect = Dialect.POSTGRES)
+@TransactionalAdvice("de-datasource")
+public interface SystemDataLabelsRepository extends PageableRepository<SystemDataLabels, UUID>  {
 
-    Genre save(@NotNull @NotBlank String name );
+    SystemDataLabels save(@NotNull @NotBlank String systemName );
 
 
     @Transactional
-    default Genre saveWithException(@NonNull @NotBlank String name) {
-        save(name);
+    default SystemDataLabels saveWithException(@NonNull @NotBlank String systemName) {
+        save(systemName);
         throw new DataAccessException("test exception");
     }
 
-    long update(@NonNull @NotNull @Id Long id, @NonNull @NotBlank String name);
+    //UUID update(@NonNull @NotNull @Id UUID sysDataLabelId, @NonNull @NotBlank String systemName);
 }

@@ -1,0 +1,54 @@
+version: "3"
+services:
+  db-rimfire-de:
+    container_name: rimfire-de-db
+    image: postgres:14-alpine3.15
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_USER: rimfirededb
+      POSTGRES_PASSWORD: magical_password
+      POSTGRES_DB: rimfirededb
+      PGDATA: /var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rimfirededb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - rimfire-de-db-psql:/var/lib/postgresql/data
+      - ./database/:/docker-entrypoint-initdb.d
+    networks:
+      rimfired-de-net:
+        ipv4_address: 173.29.0.4
+
+  db-micronaut:
+    container_name: micronaut-db
+    image: postgres:14-alpine3.15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: theSecretPassword
+      POSTGRES_DB: micronaut
+      PGDATA2: /var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dbuser"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - micronaut-psql:/var/lib/postgresql/data
+    networks:
+      rimfired-de-net:
+        ipv4_address: 173.29.0.8
+volumes:
+  rimfire-de-db-psql:
+  micronaut-psql:
+
+networks:
+  rimfired-de-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 173.29.0.0/16
