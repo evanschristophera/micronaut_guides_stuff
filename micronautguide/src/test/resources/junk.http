@@ -1,7 +1,21 @@
-GET http://localhost:8080/genres/list?orderby=name
+GET http://localhost:8080/genres/list?name=skjdfkjl
 Accept: application/json
 ###
 
-GET http://localhost:8080/datalabels/list?orderby=name
+GET http://localhost:8080/datalabels/list
 Accept: application/json
 ###
+GET http://localhost:8080/datalabels/79a873db-ad73-4249-8cf1-c5bb489a0090
+Accept: application/json
+
+###
+GET http://localhost:8080/datalabels/list/systemId/d555528c-bb2f-2723-e053-0100007f945f
+Accept: application/json
+
+
+
+
+
+
+
+

@@ -28,6 +28,18 @@ public class SystemDataLabelsController {
         return repository
                 .findById(id);
     }
+
+// Gets them all
+//    @Get("/list/systemId/{systemId}")
+//    public List<SystemDataLabels> listForSystemId( @PathVariable UUID systemId) {
+//        return repository.findBySystemId(  systemId );
+//    }
+
+
+    @Get("/list/systemId/{systemId}")
+    public List<SystemDataLabels> listForSystemId(  @PathVariable UUID systemId) {
+        return repository.findBySystemId(  systemId );
+    }
 //
 //    @Put
 //    public HttpResponse update(@Body @Valid SystemDataLabelUpdateCommand command) {
