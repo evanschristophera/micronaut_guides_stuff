@@ -5,13 +5,17 @@ import io.micronaut.core.annotation.NonNull;
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.exceptions.DataAccessException;
 import io.micronaut.data.jdbc.annotation.JdbcRepository;
+import io.micronaut.data.model.Pageable;
 import io.micronaut.data.model.query.builder.sql.Dialect;
 import io.micronaut.data.repository.PageableRepository;
 import io.micronaut.transaction.annotation.TransactionalAdvice;
 
 import javax.transaction.Transactional;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 
@@ -26,6 +30,8 @@ import java.util.UUID;
 @JdbcRepository(dialect = Dialect.POSTGRES)
 @TransactionalAdvice("de-datasource")
 public interface SystemDataLabelsRepository extends PageableRepository<SystemDataLabels, UUID>  {
+    List<SystemDataLabels> findBySystemId(UUID systemId);
+
 
 //    SystemDataLabels save(@NotNull @NotBlank String systemName, @NotNull @NotBlank UUID dataLabelTypeId );
 //
