@@ -3,10 +3,12 @@ package example.micronaut.domain;
 import io.micronaut.data.annotation.GeneratedValue;
 import io.micronaut.data.annotation.Id;
 import io.micronaut.data.annotation.MappedEntity;
+import io.micronaut.data.annotation.MappedProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
@@ -20,8 +22,29 @@ public class SystemDataLabels {
     @GeneratedValue( GeneratedValue.Type.AUTO)
     private UUID systemDataLabelsId;
 
-    @NotNull
+    @NotNull @NotBlank
+    private UUID systemId;
+
+    @NotNull @NotBlank
     private String systemName;
+
+    @NotNull @NotBlank
+    private UUID dataLabelTypeId;
+
+    @NotNull @NotBlank
+    private String dataLabelTypeName;
+
+    @NotNull @NotBlank
+    private UUID dataLabelId;
+
+    @NotNull @NotBlank @MappedProperty
+    private String dataLabelTxt;
+
+    @NotNull @NotBlank
+    private Integer displayOrderNum;
+
+
+
 //
 //    @Override
 //    public String toString() {

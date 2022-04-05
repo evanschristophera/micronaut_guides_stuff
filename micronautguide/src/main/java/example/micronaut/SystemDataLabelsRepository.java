@@ -27,14 +27,14 @@ import java.util.UUID;
 @TransactionalAdvice("de-datasource")
 public interface SystemDataLabelsRepository extends PageableRepository<SystemDataLabels, UUID>  {
 
-    SystemDataLabels save(@NotNull @NotBlank String systemName );
-
-
-    @Transactional
-    default SystemDataLabels saveWithException(@NonNull @NotBlank String systemName) {
-        save(systemName);
-        throw new DataAccessException("test exception");
-    }
+//    SystemDataLabels save(@NotNull @NotBlank String systemName, @NotNull @NotBlank UUID dataLabelTypeId );
+//
+//
+//    @Transactional
+//    default SystemDataLabels saveWithException(@NonNull @NotBlank String systemName, @NotNull @NotBlank UUID dataLabelTypeId) {
+//        save(systemName, dataLabelTypeId);
+//        throw new DataAccessException("test exception");
+//    }
 
     //UUID update(@NonNull @NotNull @Id UUID sysDataLabelId, @NonNull @NotBlank String systemName);
 }
